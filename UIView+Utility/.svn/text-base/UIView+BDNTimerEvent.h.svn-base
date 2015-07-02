@@ -1,0 +1,16 @@
+//
+//  UIView+BDNTimerEvent.h
+//  BaiduNuomiTuan
+//
+//  Created by wujiangwei on 14/11/26.
+//  Copyright (c) 2014年 Baidu. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface UIView (BDNTimerEvent)
+
+//block invoke in Main Thread
+- (void)setCountdown:(int)countSecond startBlock:(void(^)(UIView *view, int countSecond))startBlock countdownBlock:(void(^)(UIView *view, int leftSecond))countdownBlock;
+
+@end
